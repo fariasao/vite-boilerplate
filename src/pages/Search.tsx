@@ -29,7 +29,6 @@ export const Search = () => {
       <button onClick={handleClick}>Buscar</button>
       <SearchForm SearchData={searchData} />
 
-      {/* <SearchForm searchData={searchData} /> */}
     </Container>
   );
 };
