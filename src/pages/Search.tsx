@@ -3,6 +3,7 @@
 // mostrar o resultado num componente filho
 import { SearchForm } from "../components/SearchForm";
 import { useState } from "react";
+import { Container, Title } from "../styles/SearchPage.style";
 
 export const Search = () => {
   const [searchData, setSearchData] = useState({});
@@ -16,21 +17,9 @@ export const Search = () => {
       });
   }
 
-  // useEffect(() => {
-  //   fetch(`https://brasilapi.com.br/api/cep/v2/${cep}}`)
-  //     .then((response) => {
-  //       if (response.ok) {
-  //         return response.json();
-  //       }
-  //     })
-  //     .then((data) => {
-  //       setSearchData(data);
-  //     });
-  // }, [cep]);
-
   return (
-    <div>
-      <h1>Search</h1>
+    <Container>
+      <Title>Search</Title>
       <input
         type="text"
         value={cep}
@@ -41,6 +30,6 @@ export const Search = () => {
       <SearchForm SearchData={searchData} />
 
       {/* <SearchForm searchData={searchData} /> */}
-    </div>
+    </Container>
   );
 };
